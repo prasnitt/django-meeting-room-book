@@ -12,12 +12,19 @@ The Github link for course material: https://github.com/codesensei-courses/djang
 
     python manage.py startapp <new app name> 
 
-# Run
+## Run
 Run server
 
     python manage.py runserver
 
-# Database
+## Auth
+
+Create super user
+
+    python manage.py createsuperuser
+
+
+## Database
 
 Make migrations
 
@@ -40,5 +47,5 @@ Connect to Data base using shell
     python manage.py dbshell
 
 
-# Format
+## Format
     black .
