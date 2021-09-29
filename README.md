@@ -19,10 +19,17 @@ Run server
 
 # Database
 
+Make migrations
+
+    python manage.py makemigrations
+
 Show pending migrations
 
     python manage.py showmigrations
 
+Get SQL statement for migration
+
+    python manage.py sqlmigrate <app> <migration number>
 
 Apply migration
 
