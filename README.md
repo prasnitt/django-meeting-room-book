@@ -13,7 +13,25 @@ The Github link for course material: https://github.com/codesensei-courses/djang
     python manage.py startapp <new app name> 
 
 # Run
+Run server
+
     python manage.py runserver
+
+# Database
+
+Show pending migrations
+
+    python manage.py showmigrations
+
+
+Apply migration
+
+    python manage.py migrate
+
+Connect to Data base using shell
+
+    python manage.py dbshell
+
 
 # Format
     black .
