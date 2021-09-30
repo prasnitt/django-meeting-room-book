@@ -3,19 +3,27 @@
     <title>Welcome!!!</title>
 </head>
 <body>
-<h1> Welcome to Meeting Planner! </h1>
-<p>
-    This is the demo application for the cource.
-    <em> Django: Getting Started</em>
-</p>
+    <h1> Welcome to Meeting Planner! </h1>
+    <p>
+        This is the demo application for the cource.
+        <em> Django: Getting Started</em>
+    </p>
 
-<p>
-    {{message}}
-</p>
+    <p>
+        {{message}}
+    </p>
 
-<p>
-    There are currently {{num_meetings}} meetings in the database.
-</p>
+    <h2> Meetings </h2>
+    <ul>
+        {% for meeting in meetings %}
+            <li>
+                <a href="/meetings/{{meeting.id}}">
+                    {{meeting.title}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
 
 
 
