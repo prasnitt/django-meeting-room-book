@@ -5,11 +5,13 @@ from django.http import HttpResponse
 
 from meetings.models import Meeting
 
+
 def welcome(request):
-    return render(request, "website/welcome.html",context={
-        "message" : "This is sent from view to template.",
-        "num_meetings": Meeting.objects.count()
-    })
+    return render(
+        request,
+        "website/welcome.html",
+        context={"message": "This is sent from view to template.", "meetings": Meeting.objects.all()},
+    )
 
 
 def date(request):

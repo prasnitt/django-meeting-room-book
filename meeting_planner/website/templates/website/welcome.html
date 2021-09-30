@@ -3,22 +3,32 @@
     <title>Welcome!!!</title>
 </head>
 <body>
-<h1> Welcome to Meeting Planner! </h1>
-<p>
-    This is the demo application for the cource.
-    <em> Django: Getting Started</em>
-</p>
+    <h1> Welcome to Meeting Planner! </h1>
 
-<p>
-    {{message}}
-</p>
-
-<p>
-    There are currently {{num_meetings}} meetings in the database.
-</p>
+    <a href="{% url 'home'%}"> Home </a>
+    <br/>
+    <a href="{% url 'rooms'%}"> Rooms </a>
 
 
+    <p>
+        This is the demo application for the cource.
+        <em> Django: Getting Started</em>
+    </p>
 
+    <p>
+        {{message}}
+    </p>
+
+    <h2> Meetings </h2>
+    <ul>
+        {% for meeting in meetings %}
+            <li>
+                <a href="{% url 'detail' meeting.id %}">
+                    {{meeting.title}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 
 </html>
